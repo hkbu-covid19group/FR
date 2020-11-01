@@ -1,7 +1,9 @@
-function [ SD, FD, FR ] = FDFR_Rao_q ( otu_table, dij, q )
+function [ SD, FD, FR ] = FDFR_Rao_q ( otu_table, dij)
 % SD = \sum_i \sum_j (p_i)^q (p_j)^q 
 % FD = \sum_i \sum_j d_ij (p_i)^q (p_j)^q 
 % FR = SD(q) - FD(q)
+
+q=1; %used in the paper
 
 [Num_spe, Num_samp] = size (otu_table);
 
